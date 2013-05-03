@@ -308,6 +308,8 @@ module Smsru
           status_code: status_code,
           smses_ids: [sms].flatten.map.with_index { |sms, index| {number: sms[:number], id: responces[index]} }
         }
+      else
+        responce
       end
     end
 
